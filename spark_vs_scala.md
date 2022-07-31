@@ -30,10 +30,7 @@ Spark es un "motor" mas comparable a una BD relacional como postgres.
 
 ![](spark_vs_postgres.png)
 
-```
-Scala
-```
-
+```Scala
  case class Movimiento (fecha: String, valor: Int)
 
  case class Cartola (num_cuenta: Int, saldo_inicial: Int, movimientos: Array [Movimiento])
@@ -79,7 +76,5 @@ Scala
    .map (_.num_cuenta)                 // este map es parte de la API de Spark
 
  }
-
-```
 ```
 
