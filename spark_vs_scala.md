@@ -26,55 +26,34 @@ Spark es un "motor" mas comparable a una BD relacional como postgres.
 
   => la API cliente Spark se parece muchísimo a la API de Collections de Scala
 
-  
 
 ![](spark_vs_postgres.png)
 
+Ejemplo de codigo que mezcla llamadas a API estandar de Scala con llamadas a la API de Spark
+
 ```Scala
  case class Movimiento (fecha: String, valor: Int)
-
  case class Cartola (num_cuenta: Int, saldo_inicial: Int, movimientos: Array [Movimiento])
 
-
-
  /**
-
-  \* Filtra las cartolas que tuvieron por lo menos 3 movimientos superior a 50% del saldo inicial
-
+  * Filtra las cartolas que tuvieron por lo menos 3 movimientos superior a 50% del saldo inicial
   *
-
-  \* @param cartolas 
-
+  * @param cartolas 
   */
 
  def getCuentasMovimientosImportantes (cartolas: Dataset [Cartola]) (implicit sqlContext: SQLContext): Dataset [Int] = {
-
   import sqlContext.implicits._
 
-
-
   cartolas
-
-   .filter (cartola => {                // este filter es parte de la API de Spark
-
-​    val threshold = cartola.saldo_inicial / 2
-
-
-
-​    val movimientos_grande = cartola.movimientos
-
-​     .map (_.valor)                 // esta map es parte de la API estándar de Scala 
-
-​     .filter (_ > threshold)             // este filter es parte de la API estándar de Scala 
-
-
-
-​    movimientos_grande.size >= 3
-
-   })
-
-   .map (_.num_cuenta)                 // este map es parte de la API de Spark
-
+    .filter (cartola => {                // este filter es parte de la API de Spark
+      val threshold = cartola.saldo_inicial / 2
+      val movimientos_grande = cartola.movimientos
+       .map (_.valor)                   // esta map es parte de la API estandar de Scala 
+       .filter (_ > threshold)          // este filter es parte de la API estandar de Scala
+ 
+      movimientos_grande.size >= 3
+    })
+    .map (_.num_cuenta)                 // este map es parte de la API de Spark
  }
 ```
 
