@@ -16,8 +16,9 @@ Scala es un [lenguaje de programación](lenguaje.md)
 
 TO-DO:
 
-- clases, traits
-- métodos, funciones
+- clases, traits, objects
+- package, import,
+- métodos, funciones,
 - build tools (sbt, maven, scala-cli)
 - IDE: VSCode + Metals, Intelij IDEA
 - Scala en Spark
