@@ -10,15 +10,16 @@ Scala es un [lenguaje de programación](lenguaje.md)
 
 [Expresiones básicas, tipos de datos](expresiones-scala-cli.md)
 
+[Clases, case class, métodos](estructuras.md)
+
+[package](package.md)
+
 [Colecciones](otras-colecciones.md)
 
 
+Siguiente taller, hands-on desarrollo mini-app con:
 
-TO-DO:
+- build tools (sbt)
+- IDE: VSCode + Metals
 
-- clases, traits
-- métodos, funciones
-- build tools (sbt, maven, scala-cli)
-- IDE: VSCode + Metals, Intelij IDEA
-- Scala en Spark
 

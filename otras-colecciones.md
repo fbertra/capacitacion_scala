@@ -45,9 +45,38 @@ val region_not_found = moneda_region.get ("XYZ")
 
 val region_not_found: Option[String] = **None**
 
-````
+````scala
 val region = moneda_region.get ("XYZ").getOrElse ("no encontrada")
 ````
 
 val region: **String** = no encontrada
+
+
+**Pattern matching sobre colecciones**
+
+````scala
+monedas match {
+    case head :: tail => s"No vacia, su cabeza es $head"
+    case Nil => "vacia"
+}
+````
+val res0: String = No vacia, su cabeza es EUR
+
+
+````scala
+val region = region_clp match {
+    case Some (region) => region
+    case None => "no encontrada"
+}
+````
+val region: String = America del Sur
+
+````scala
+val region = region_not_found match {
+    case Some (region) => region
+    case None => "no encontrada"
+}
+````
+val region: String = no encontrada
+
 
