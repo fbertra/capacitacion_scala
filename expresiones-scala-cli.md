@@ -118,7 +118,26 @@ val hasta: String = NTT-Data
 
 Nos fuimos de Everis hasta NTT-Data
 
+````scala
+val concat1 = "uno" + " " + "dos"
+````
 
+val concat1: String = uno dos
+
+Interpolacion
+````scala
+val 11 = 1
+val i2 = 2
+val d3 = 3.0
+val sz4 = "4 de cuatro"
+
+val concat2 = s"uno: $i1, dos: $i2, tres: $d3, cuatro: $sz4"
+````
+val i1: Int = 1
+val i2: Int = 2
+val d3: Double = 3.0
+val sz4: String = 4 de cuatro
+val concat2: String = uno: 1, dos: 2, tres: 3.0, cuatro: 4 de cuatro
 
 Boolean
 
@@ -133,6 +152,8 @@ val todosSomosChilenos = false
 ````
 
 val todosSomosChilenos: Boolean = false
+
+
 
 
 
