@@ -16,10 +16,6 @@ Scala es un [lenguaje de programación](lenguaje.md)
 
 [Colecciones](otras-colecciones.md)
 
-
-Siguiente taller, hands-on desarrollo mini-app con:
-
-- build tools (sbt)
-- IDE: VSCode + Metals
+[Taller](taller.md)
 
 
