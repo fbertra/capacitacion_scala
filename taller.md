@@ -1,6 +1,6 @@
 # Taller 
 
-Hands-on desarrollo mini-app con:
+Hands-on desarrollo [mini-app](mini-app.md) con:
 
 - build tools (sbt)
 - IDE: VSCode + Metals
